@@ -89,11 +89,4 @@ ffmpeg -i input.mov -c:v libvpx-vp9 -crf 32 -b:v 0 -an opening.webm
 
 `-movflags +faststart` 把索引挪到文件开头，不用下完整个文件就能起播。
 
-## 遇到问题时
-设置页的状态行会说明当前会播什么、或者为什么不播。**有画面没声音**是因为 Chromium 要求先有用户交互才允许带声音播放，插件会自动静音重试。**启动时看到 DSH 自己的小鲸鱼**是 Electron 主窗口画的启动画面，插件替换不了，它负责的是之后那一段。
-
-工程细节（路由与信任栅栏、Cordis 上下文的注意事项、测试套件）写在代码注释和 `tools/` 里。
-
-## 许可
-
-MIT，覆盖插件代码。`assets/opening.svg` 是自带的示例素材，同样以 MIT 提供，换成自己的覆盖它或改 `src` 即可。
+`assets/opening.svg` 是自带的示例素材，换成自己的覆盖它或改 `src` 即可。
