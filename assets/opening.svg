@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080"
+     preserveAspectRatio="xMidYMid slice" role="img" aria-label="DeepSeek Harness opening animation">
+  <title>DeepSeek Harness — 开屏动画</title>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#040815"/>
+      <stop offset="0.55" stop-color="#071228"/>
+      <stop offset="1" stop-color="#01030a"/>
+    </linearGradient>
+
+    <radialGradient id="haloA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.55"/>
+      <stop offset="0.55" stop-color="#2563eb" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="haloB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.42"/>
+      <stop offset="0.6" stop-color="#0ea5e9" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#0369a1" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="whaleFill" x1="0.1" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#eaf4ff"/>
+      <stop offset="0.5" stop-color="#a9cdf5"/>
+      <stop offset="1" stop-color="#4f7fc4"/>
+    </linearGradient>
+
+    <linearGradient id="wordFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.62" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#7fb2f0"/>
+    </linearGradient>
+
+    <linearGradient id="ruleFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#60a5fa" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="soft" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="46"/>
+    </filter>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+
+  <g fill="#dbeafe">
+    <circle cx="188" cy="196" r="2.4" opacity="0.55"/>
+    <circle cx="432" cy="118" r="1.7" opacity="0.4"/>
+    <circle cx="703" cy="252" r="2.1" opacity="0.5"/>
+    <circle cx="948" cy="132" r="1.5" opacity="0.35"/>
+    <circle cx="1216" cy="214" r="2.3" opacity="0.45"/>
+    <circle cx="1477" cy="118" r="1.8" opacity="0.5"/>
+    <circle cx="1712" cy="238" r="2.5" opacity="0.4"/>
+    <circle cx="300" cy="392" r="1.6" opacity="0.3"/>
+    <circle cx="1608" cy="392" r="1.4" opacity="0.3"/>
+    <circle cx="1052" cy="70" r="1.9" opacity="0.32"/>
+    <animate attributeName="opacity" values="0.85;0.3;0.85" dur="6.5s" repeatCount="indefinite"/>
+  </g>
+
+  <g filter="url(#soft)">
+    <circle cx="520" cy="430" r="330" fill="url(#haloA)">
+      <animate attributeName="opacity" values="0;0.95;0.8" keyTimes="0;0.45;1" dur="3.2s" fill="freeze"/>
+    </circle>
+    <circle cx="1420" cy="742" r="390" fill="url(#haloB)">
+      <animate attributeName="opacity" values="0;0.9;0.72" keyTimes="0;0.55;1" dur="3.2s" fill="freeze"/>
+    </circle>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.9s" begin="0.15s" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 26;0 0" dur="2.6s"
+                        calcMode="spline" keySplines="0.22 1 0.36 1" fill="freeze" begin="0.15s"/>
+      <g filter="url(#glow)">
+        <path fill="url(#whaleFill)"
+              d="M958 560 C1114 470 1332 474 1480 560 C1600 630 1672 726 1698 802 C1648 780 1580 776 1516 810
+                 C1428 770 1330 750 1222 750 C1096 750 992 706 926 640 C888 601 900 578 958 560 Z"/>
+        <path fill="url(#whaleFill)" opacity="0.92"
+              d="M1698 802 C1766 758 1826 728 1858 736 C1846 788 1814 838 1768 866 C1754 844 1730 818 1698 802 Z"/>
+        <path fill="url(#whaleFill)" opacity="0.86"
+              d="M1698 802 C1760 830 1808 866 1832 906 C1776 916 1714 906 1666 880 C1688 856 1698 828 1698 802 Z"/>
+        <circle cx="1032" cy="612" r="9" fill="#0b1220"/>
+      </g>
+    </g>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="1s" begin="0.9s" fill="freeze"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 14;0 0" dur="2.4s"
+                        calcMode="spline" keySplines="0.22 1 0.36 1" fill="freeze" begin="0.9s"/>
+      <text x="960" y="936" text-anchor="middle" fill="url(#wordFill)"
+            font-family="'Segoe UI', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif"
+            font-size="58" font-weight="600" letter-spacing="10">DeepSeek Harness</text>
+    </g>
+  </g>
+
+  <rect x="760" y="982" width="400" height="2" rx="1" fill="url(#ruleFill)" opacity="0">
+    <animate attributeName="opacity" values="0;1" dur="0.8s" begin="1.35s" fill="freeze"/>
+  </rect>
+
+  <text x="960" y="1042" text-anchor="middle" fill="#93b4d8" opacity="0"
+        font-family="'Segoe UI', 'Microsoft YaHei', 'PingFang SC', system-ui, sans-serif"
+        font-size="20" letter-spacing="4">
+    正在启动
+    <animate attributeName="opacity" values="0;0.9" dur="0.7s" begin="1.5s" fill="freeze"/>
+  </text>
+
+  <rect width="1920" height="1080" fill="#01030a" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.9" keyTimes="0;0.86;1" dur="3.2s" fill="freeze"/>
+  </rect>
+</svg>

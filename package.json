@@ -1,0 +1,62 @@
+{
+  "name": "dsh-open-animation",
+  "version": "0.1.0",
+  "description": "给 DSH 加一段自定义开屏动画：启动时播放一段视频或动图，播完渐隐露出界面。自带默认动画，装好即可用；也能在设置里换成自己的素材，清空即彻底关闭。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "splash",
+    "splash-screen",
+    "boot-animation",
+    "startup-animation",
+    "opening-animation",
+    "video",
+    "mp4",
+    "webm"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "assets",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node tools/verify.mjs && node tools/check-docs.mjs && node tools/smoke-context.mjs && node tools/smoke-host.mjs",
+    "verify": "node tools/verify.mjs",
+    "check:docs": "node tools/check-docs.mjs",
+    "test:context": "node tools/smoke-context.mjs",
+    "test:host": "node tools/smoke-host.mjs"
+  },
+  "meta": {
+    "title": "开屏动画",
+    "description": "启动时播放一段视频或动图，播完渐隐露出界面。自带默认动画，也能换成自己的素材。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

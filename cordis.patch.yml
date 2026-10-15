@@ -1,0 +1,22 @@
+# dsh-open-animation — bundle patch
+#
+# 这是插件的「挂载声明」。DSH 启动时按 bundle 层栈叠加各插件的 patch，
+# 本文件把开屏动画插件插入当前 profile 的配置树。
+#
+# 安装：在 DSH 里用 plugin_manager (action=install_bundle, target=本目录绝对路径)
+# 或命令行：
+#   dsh plugin --profile <profile> add <本目录绝对路径>
+#
+# 想改默认值，请在 profile 的 cordis.patch.yml 里写一条覆盖（只写想改的字段）：
+#   - id: dsh-open-animation
+#     name: dsh-open-animation
+#     config:
+#       fit: contain
+#       muted: false
+#       fadeOutMs: 600
+#
+# 覆盖会替换整份 config，未写的字段回到下面的默认值。
+
+- insert:
+    - id: dsh-open-animation
+      name: dsh-open-animation

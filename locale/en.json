@@ -1,0 +1,4 @@
+{
+  "title": "Opening Animation",
+  "description": "Plays a video or animated image on startup, then fades out to reveal the interface. Ships with a default animation and can be pointed at your own media."
+}
