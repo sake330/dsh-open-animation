@@ -1,0 +1,12 @@
+# Repo-only assets.
+#
+# `assets/普鲸.mp4` is local material, not the shipped default: the bundled animation the
+# plugin actually loads is `assets/opening.svg`. `screenshot-splash.png` is a README image.
+# Neither is referenced by code, so keeping them out of history avoids carrying a few
+# megabytes of binaries.
+#
+# Note: these stay in the *published* package, because npm packs `files[]` from
+# package.json and never consults .gitignore. Add an `!assets/...` negation there if the
+# tarball should drop them too.
+assets/普鲸.mp4
+assets/screenshot-splash.png
